@@ -205,6 +205,8 @@ tr:nth-child(even) {
 
 .lotto_ad2 {
     border: 1px solid #dddddd;
+    display:inline-block;
+    margin: 3% 0;
 
 }
 

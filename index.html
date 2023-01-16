@@ -99,7 +99,7 @@
                         <a href="https://zzvv.netlify.app/" target="_blank"><img src="./img/wegcv.png" alt="AI 동물상 테스트"></a>
                     </div>
                     <!-- 쿠팡 광고 -->
-<!--
+
                     <div class="lotto_ad2">
 
                         <script src="https://ads-partners.coupang.com/g.js"></script>
@@ -107,7 +107,7 @@
                             new PartnersCoupang.G({"id":5841,"trackingCode":"AF7117182","subId":null,"template":"carousel","width":"680","height":"140"});
                         </script>
                     </div>
--->
+
                 <!-- 쿠팡 광고 -->
                 </div>
                 
@@ -116,15 +116,6 @@
                 
             </div>
 
-            
-            <!-- 
-
-            <div>
-                <ul class="nav_ul">
-                    <li><a href="#" onclick="gatReload();">무또</a></li>
-                </ul>
-            </div>
-                -->
         </div>
         
         
@@ -156,7 +147,9 @@
                 lotto_count++;
                 
                 $(".div_count_lotto_span").html(lotto_count+"회차").css("color", "#000000");
-                $(".lotto_btn").attr("disabled", false);
+
+                setTimeout(() => $(".lotto_btn").attr("disabled", false), 500);
+                
 
                 
                 
@@ -173,6 +166,7 @@
                 lotto_table += "<td>"+lotto_number_save[4]+"</td>";
                 lotto_table += "<td>"+lotto_number_save[5]+"</td>";
                 lotto_table += "</tr>";
+                
                 $('.lotto_tbody').prepend(lotto_table);
 
             }
