@@ -106,8 +106,14 @@
         
         
         <script type="text/javascript">
-            let lotto_table = "", lotto_count = 0;
+            let lotto_table = "", lotto_count = 0, lotto_number_save = [];
             function lotto_btn_click() {
+                if (lotto_count > 0) {
+                    lotto_number_save = lotto_six;
+                    lotto_num_save()
+                }
+
+
                 lotto_six_num();
                 for(let i = 0; i < 6; i++) {
                     $('.lotto_sapn'+(i+1)).html(lotto_six[i]);
@@ -125,21 +131,26 @@
                 }
                 
                 lotto_count++;
-                lotto_table = "";
-                lotto_table += "<tr>";
-                lotto_table += "<td>"+lotto_count+"회차</td>";
-                lotto_table += "<td>"+lotto_six[0]+"</td>";
-                lotto_table += "<td>"+lotto_six[1]+"</td>";
-                lotto_table += "<td>"+lotto_six[2]+"</td>";
-                lotto_table += "<td>"+lotto_six[3]+"</td>";
-                lotto_table += "<td>"+lotto_six[4]+"</td>";
-                lotto_table += "<td>"+lotto_six[5]+"</td>";
-                lotto_table += "</tr>";
-                $('.lotto_tbody').prepend(lotto_table);
+                
                 $(".lotto_btn").attr("disabled", false);
 
                 
                 
+            }
+
+            function lotto_num_save() {
+                lotto_table = "";
+                lotto_table += "<tr>";
+                lotto_table += "<td>"+lotto_count+"회차</td>";
+                lotto_table += "<td>"+lotto_number_save[0]+"</td>";
+                lotto_table += "<td>"+lotto_number_save[1]+"</td>";
+                lotto_table += "<td>"+lotto_number_save[2]+"</td>";
+                lotto_table += "<td>"+lotto_number_save[3]+"</td>";
+                lotto_table += "<td>"+lotto_number_save[4]+"</td>";
+                lotto_table += "<td>"+lotto_number_save[5]+"</td>";
+                lotto_table += "</tr>";
+                $('.lotto_tbody').prepend(lotto_table);
+
             }
             
             $(".lotto_btn").click(function () {
