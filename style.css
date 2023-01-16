@@ -1,0 +1,198 @@
+/* 사이트 css 설정 */
+body {
+    margin: 0;
+    background-color: #eeeeee;
+}
+.div_area {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    padding-top: 1vh;
+}
+
+.div_area_top, .div_area_mid, .div_area_bot {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgb(22, 22, 22);
+}
+
+.div_area_top {
+    background-color: #ffffff;
+    width: 100%;
+    height: 8vh;
+}
+
+.div_area_mid {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.div_area_bot {
+    background-color: #ffffff;
+    width: 100%;
+    height: 8vh;
+}
+
+.div_nav {
+    width: 25%;
+    float: left;
+    line-height: 7.7vh;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.div_nav:hover {
+    background-color: #191919;
+    color: #ffffff;
+}
+
+.div_nav span {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.div_title {
+    text-align: center;
+    padding: 5% 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.div_lotto_center {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 3% 0;
+}
+
+.div_lotto {
+    text-align: center;
+    width: 5vw;
+    line-height: 5vw;
+    background-color: #ffffff;
+    border-radius: 50px;
+    display:inline-block;
+}
+@media screen and (max-width: 960px) {
+    .div_lotto {
+        width: 10vw;
+        line-height: 10vw;
+        border-radius: 100px;
+    }
+    
+}
+
+.div_lotto::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.div_lotto span {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+
+.lotto_table_box {
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+}
+
+.lotto_table_box div {
+    height: 20vh;
+    display:inline-block;
+    overflow: auto;
+    margin: auto;
+}
+
+.lotto_table {
+border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1vh 2vw;
+}
+
+@media screen and (max-width: 960px) {
+td {
+  padding: 1vh 3vw;
+}
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+
+.lotto_btn_div {
+    text-align: center;
+    margin: auto;
+    padding: 3% 0;
+    margin: 3% 0 0;
+}
+
+
+.lotto_btn {
+    text-align: center;
+    width: 50%;
+    background-color: #3587F2;
+    display:inline-block;
+    border: 1px solid #3587F2;
+    padding: 10px 32px;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 5px 3px #3587F2; */
+    transition-duration: 0.1s;
+    color: #ffffff;
+}
+
+.lotto_btn:hover {
+    background-color: #ffffff;
+    color: #3587F2;
+}
+
+.lotto_btn:active {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.lotto_btn:disabled {
+    background-color: #ffffff;
+    color: #3587F2;
+}
+
+
+.lotto_ad_box {
+    text-align: center;
+    width: 100%;
+
+}
+
+.lotto_ad1 {
+    border: 1px solid #dddddd;
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    overflow:hidden;
+}
+
+.lotto_ad1 img {
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+
+.lotto_ad2 {
+    border: 1px solid #dddddd;
+
+}
+/* 사이트 css 설정 */

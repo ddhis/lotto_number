@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>무료 로또번호 무또</title>
+		<link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="lotto_number_js.js" charset="UTF-8"></script>
+        
+        <!-- 제이쿼리 사용 선언 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- 제이쿼리 사용 선언 -->
+        
+	</head>
+	<body>
+		<div class="div_area">
+                
+            
+            <div class="div_area_top">
+                <div>
+                    <div class="div_nav">
+                        <span>무또</span>
+                    </div>
+                    <div class="div_nav">
+                        <span>무또</span>
+                    </div>
+                    <div class="div_nav">
+                        <span>무또</span>
+                    </div>
+                    <div class="div_nav">
+                        <span>무또</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_area_mid">
+                <div class="div_title">
+                    <span>무료 로또번호 추첨기</span>
+                </div>
+                <div class="div_lotto_center">
+                    <div class="div_lotto" id="div_lotto1">
+                        <span class="lotto_sapn1">0</span>
+                    </div>
+                    <div class="div_lotto" id="div_lotto2">
+                        <span class="lotto_sapn2">0</span>
+                    </div>
+                    <div class="div_lotto" id="div_lotto3">
+                        <span class="lotto_sapn3">0</span>
+                    </div>
+                    <div class="div_lotto" id="div_lotto4">
+                        <span class="lotto_sapn4">0</span>
+                    </div>
+                    <div class="div_lotto" id="div_lotto5">
+                        <span class="lotto_sapn5">0</span>
+                    </div>
+                    <div class="div_lotto" id="div_lotto6">
+                        <span class="lotto_sapn6">0</span>
+                    </div>
+                </div>
+                
+                <div class="lotto_table_box">
+                    <div>
+                    <table class="lotto_table">
+                        <tbody class="lotto_tbody">
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                
+                <div class="lotto_btn_div">
+                    <button class="lotto_btn">
+                        <span>랜덤 생성</span>
+                    </button>
+                </div>
+                
+                <div class="lotto_ad_box">
+                    <div class="lotto_ad1">
+                        <a href="https://zzvv.netlify.app/"><img src="./img/wegcv.png" alt="AI 동물상 테스트"></a>
+                    </div>
+                    <!-- 쿠팡 광고 -->
+<!--
+                    <div class="lotto_ad2">
+
+                        <script src="https://ads-partners.coupang.com/g.js"></script>
+                        <script>
+                            new PartnersCoupang.G({"id":5841,"trackingCode":"AF7117182","subId":null,"template":"carousel","width":"680","height":"140"});
+                        </script>
+                    </div>
+-->
+                <!-- 쿠팡 광고 -->
+                </div>
+                
+            </div>
+            <div class="div_area_bot">
+                
+            </div>
+
+            
+            <!-- 
+
+            <div>
+                <ul class="nav_ul">
+                    <li><a href="#" onclick="gatReload();">무또</a></li>
+                </ul>
+            </div>
+                -->
+        </div>
+        
+        
+        <script type="text/javascript">
+            let lotto_table = "", lotto_count = 0;
+            function lotto_btn_click() {
+                lotto_six_num();
+                for(let i = 0; i < 6; i++) {
+                    $('.lotto_sapn'+(i+1)).html(lotto_six[i]);
+                    if (lotto_six[i] <= 10) {
+                        $('#div_lotto'+(i+1)).css("background-color", "#fbc400");
+                    } else if (lotto_six[i] > 10 && lotto_six[i] <= 20) {
+                        $('#div_lotto'+(i+1)).css("background-color", "#69c8f2");
+                    } else if (lotto_six[i] > 20 && lotto_six[i] <= 30) {
+                        $('#div_lotto'+(i+1)).css("background-color", "#ff7272");
+                    } else if (lotto_six[i] > 30 && lotto_six[i] <= 40) {
+                        $('#div_lotto'+(i+1)).css("background-color", "#aaaaaa");
+                    } else {
+                        $('#div_lotto'+(i+1)).css("background-color", "#b0d840");
+                    }
+                }
+                
+                lotto_count++;
+                lotto_table = "";
+                lotto_table += "<tr>";
+                lotto_table += "<td>"+lotto_count+"회차</td>";
+                lotto_table += "<td>"+lotto_six[0]+"</td>";
+                lotto_table += "<td>"+lotto_six[1]+"</td>";
+                lotto_table += "<td>"+lotto_six[2]+"</td>";
+                lotto_table += "<td>"+lotto_six[3]+"</td>";
+                lotto_table += "<td>"+lotto_six[4]+"</td>";
+                lotto_table += "<td>"+lotto_six[5]+"</td>";
+                lotto_table += "</tr>";
+                $('.lotto_tbody').prepend(lotto_table);
+                $(".lotto_btn").attr("disabled", false);
+
+                
+                
+            }
+            
+            $(".lotto_btn").click(function () {
+                $(".lotto_btn").attr("disabled", true);
+                
+                lotto_btn_click();
+              });
+        </script>
+	</body>
+</html>
